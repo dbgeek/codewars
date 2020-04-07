@@ -11,7 +11,8 @@
     "type-check:watch": "npm run type-check -- --watch",
     "build": "npm run build:types && npm run build:js",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline"
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
+    "test": "jest --watchAll --maxWorkers=4"
   },
   "author": "",
   "license": "ISC",
@@ -25,7 +26,11 @@
     "@babel/plugin-transform-typescript": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "@babel/preset-typescript": "^7.8.3",
+    "@types/jest": "^25.2.1",
     "@types/node": "^13.1.6",
-    "typescript": "^3.7.4"
+    "jest": "^25.2.7",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.7.4",
+    "typescript-tslint-plugin": "^0.5.5"
   }
 }
