@@ -21,3 +21,7 @@ jobs:
       working-directory: ./jscriptKatas
       run: |
         npm ci
+     - name: npm test
+      working-directory: ./jscriptKatas
+      run: |
+        npm run test-ci
