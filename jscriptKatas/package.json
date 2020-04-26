@@ -1,0 +1,21 @@
+{
+  "name": "jscriptkatas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest --watchAll --maxWorkers=4"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-jest": "^25.4.0",
+    "jest": "^25.3.0"
+  },
+  "jest": {
+    "verbose": true
+  }
+}
