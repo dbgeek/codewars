@@ -1,0 +1,27 @@
+name: golang CI
+
+on:
+  push:
+    paths:
+      - 'goKatas/**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        go-version: [1.13.x, 1.14.x]
+
+    steps:
+    - name: Install Go
+      uses: actions/setup-go@v1
+      with:
+        go-version: ${{ matrix.go-version }}
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: run all go tests
+      working-directory: ./goKatas
+      run: |
+        go test ./...

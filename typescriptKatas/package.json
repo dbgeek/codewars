@@ -9,7 +9,8 @@
   "scripts": {
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "test": "jest --watchAll --maxWorkers=4"
+    "test": "jest --watchAll --maxWorkers=4",
+    "test-ci": "jest --maxWorkers=4"
   },
   "author": "",
   "license": "ISC",

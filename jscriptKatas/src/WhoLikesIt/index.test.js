@@ -1,21 +1,21 @@
 import { likes } from './index';
 
-test('test1', () => {
+test('likes test1', () => {
     expect(likes([])).toEqual("no one likes this");
 });
 
-test('tes2', () => {
+test('likes tes2', () => {
     expect(likes(["Peter"])).toEqual("Peter likes this");
 });
 
-test('test3', () => {
+test('likes test3', () => {
     expect(likes(["Jacob", "Alex"])).toEqual("Jacob and Alex like this");
 });
 
-test('test4', () => {
+test('likes test4', () => {
     expect(likes(["Max", "John", "Mark"])).toEqual("Max, John and Mark like this");
 });
 
-test('test5', () => {
+test('likes test5', () => {
     expect(likes(["Alex", "Jacob", "Mark", "Max"])).toEqual("Alex, Jacob and 2 others like this");
 });
