@@ -5,23 +5,30 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest --watchAll --maxWorkers=4",
-    "test-ci": "jest --maxWorkers=4"
+    "test-ci": "node --experimental-vm-modules node_modules/jest/bin/jest.js --maxWorkers=4",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
     "@types/jest": "^26.0.10",
-    "babel-jest": "^25.4.0",
-    "eslint": "^7.7.0",
-    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jest": "^23.20.0",
-    "jest": "^25.5.4"
+    "eslint-plugin-jest": "^24.3.2",
+    "jest": "^26.6.3",
+    "jest-environment-jsdom-sixteen": "^1.0.3"
   },
   "jest": {
-    "verbose": true
-  }
+    "verbose": true,
+    "transform": {},
+    "testEnvironment": "jest-environment-jsdom-sixteen"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true
+  },
+  "private": true
 }
